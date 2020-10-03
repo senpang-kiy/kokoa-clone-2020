@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>welcome to Kokoa Talk</title>
+    </head>
+    <body>
+        <div class="status-bar">
+            <div class="status-bar__class">
+                <span>No Service</span>
+                <i class="fas fa-wifi"></i><!--to do : wifi Icon-->
+            </div>
+            <div class="status-bar__class">
+                <span>18:43</span>
+            </div>
+            <div class="status-bar__class">
+                <span>82%</span>
+                <i class="fas fa-battery-three-quarters fa-lg"></i><!--to do battery Icon-->
+                <i class="fas fa-bolt"></i><!--to do : Lightning Icon-->
+            </div>
+        </div>
+
+        <header class="welcome-header">
+            <h1 class="welcome-header__title">Welcome to KoKoa Clone</h1>
+            <p  class="welcome-header__text">
+                If you have a kokoa Account, log in with your email or phone number
+            </p>
+        </header>
+
+        <form action="friends.html" method="get" id="login-from"> <!--from 의 속성은 데이터를 다른데로 보낼수 있다 -->
+            <input name="username" type="text" placeholder="Email or phone number"/>
+            <input name="password" type="password" placeholder="Password"/>
+            <input type="submit" value="Log In"/>
+            <a href="#">Find Kokoa Account or Password</a>
+        </form>
+
+    </body>
+ 
+    <script src="https://kit.fontawesome.com/a64b7e4793.js" crossorigin="anonymous">
+    </script>
+</html>
