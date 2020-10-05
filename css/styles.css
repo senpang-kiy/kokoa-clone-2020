@@ -10,8 +10,14 @@
 /* screens */
 @import "screens/login.css";
 @import "screens/welcome.css";
+@import "components/screen-header.css";
+@import "screens/friends.css";
 
 body{
+    color:  #2e3636;
     font-family: 'Open Sans', sans-serif;
     height: 1000vh;
+}
+.body__topbox{
+    height: 25px;
 }
