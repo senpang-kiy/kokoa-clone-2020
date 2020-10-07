@@ -6,6 +6,8 @@
 /* components */
 @import "components/status-bar.css";
 @import "components/nav-bar.css";
+@import "components/user-component.css";
+
 
 /* screens */
 @import "screens/login.css";
@@ -20,4 +22,8 @@ body{
 }
 .body__topbox{
     height: 25px;
+}
+
+.main-screen{
+    padding: 0px var(--horizontal-space);
 }
