@@ -16,15 +16,7 @@
     color: #2e363e;
 }
 .nav__notification{
-    background-color: tomato;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 600;
+
     position: absolute; /* 겹쳐진다  그리고 부모 태그에 position: relative 가 선언 되있어야된다.*/
     left: 15px;        /*위치를 조절한다*/
     bottom: 15px;     /*위치를 조절한다*/
