@@ -93,3 +93,22 @@
 .open-post__heart-count span{
     margin-left: 3px;
 }
+
+@keyframes heartBeat{
+    0%{
+        color:  white;
+        transform: none;
+    }
+    50%{
+        color: tomato;
+        transform: scale(1.5);
+    }
+    100%{
+        color: white;
+        transform: none;
+    }
+}
+.open-post__heart-count:hover i{
+    will-change: transform;   /* 이명령어는 미리 컴퓨터에게 변화가 된다고 알려주어 그래픽을 가속화하여 애니매이션을 할수있도록 미리 알려주는 명령어이다*/
+    animation: heartBeat 1s linear infinite;
+}

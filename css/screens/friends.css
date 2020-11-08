@@ -27,3 +27,29 @@
     justify-content: space-between;
     color: rgba(0, 0, 0, 0.5);
 }
+
+@keyframes hideSplashScreen{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        visibility: hidden; /* 애니매이션이 끝난뒤에 마우스 클릭할수 있도록 해준다*/
+    }
+}
+
+#splash-screen{
+    background-color: var(--yellow);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    animation: hideSplashScreen 0.4s ease-in-out forwards;
+    /* 마지막 값으로 애니매이션을 끝내는 값을으로 적용하고 싶다면 forwards를 사용
+    왜나하면 애니매이션은 끝나면 다시 초기 값으로 돌아가기 때문에 */
+    animation-delay: 1.5s; /*애니매이션이 2초 뒤에 시작되라는 명령어 */
+}

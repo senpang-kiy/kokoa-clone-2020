@@ -1,0 +1,192 @@
+#chat-screen{
+    background-color: #abc1d1;
+    height: 500vh;
+}
+#chat-screen .status-bar{
+    background-color: #abc1d1;
+    z-index: 2;
+    
+}
+#chat-screen .alt-header{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+    background-color: #abc1d1;
+}
+
+@keyframes fadeIn{
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+
+
+.main-chat{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation:  fadeIn 0.5s linear;
+}
+
+.chat__timestamp{
+    color: white;
+    background-color: #92a4b2;
+    padding: 11px;
+    font-size: 14px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+}
+.message-row{
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.message-row img{
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    margin-right: 15px;
+}
+
+.message__info{
+    display: flex;
+    align-items: flex-end;
+}
+
+.message__author{
+    margin-bottom: 12px;
+    display: block;
+}
+.message__bubble{
+    background-color: white;
+    padding: 13px;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    margin-right: 5px;
+}
+
+.message__time,
+.message__author{
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.message-row--own{
+    justify-content: flex-end;
+}
+
+.message-row--own .message__bubble{
+    background-color: var(--yellow);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 15px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+/* .message-row--own .message__bubble{
+    order: 1; /*배치를 바꾼다
+}
+.message-row--own .message__time{
+    order: 0;
+    margin-right: 5px;
+} 거꾸로 배치하고싶으면 이런 방법도 있고 아래와 같은 방법도 있다.*/ 
+
+.message-row--own .message__info{
+    flex-direction: row-reverse;
+}
+
+.reply{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.reply i{
+    opacity: 0.5;
+}
+
+.reply .reply__column:first-child{
+    width: 10%;
+}
+.reply .reply__column:last-child{
+    width: 90%;
+    position: relative;
+}
+.reply input{
+    padding: 12px;
+    width: 100%;
+    border: var(--main-border);
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+.reply__column:last-child > i,
+.reply__column:last-child button{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.reply__column:last-child i{
+    right: 15px;
+} 
+
+.reply__column:last-child > i{
+    right: 45px;
+    top: 13px;
+}
+
+.reply__column button{
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.reply__column button i{
+    opacity: 1;
+}
+
+.reply__column button:focus,
+.reply__column button:active{
+    outline:none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button{ 
+    transition: opacity 0.3s ease-in-out;
+    
+} 
+
+
+/*:focus-within  을 사용의미는 reply 내부에 어떤 elemnet 가 focus 되어있다면 이라는 뜻이다 */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button{ 
+    opacity: 0;
+    visibility: hidden;
+}   
+
+.reply:focus-within input{
+    width: 95vw;
+    transform: translateX(-13.5%) translateY(-80px);
+}
+
+.reply:focus-within{
+    transform: translateY(80px);
+}
